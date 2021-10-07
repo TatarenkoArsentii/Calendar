@@ -6,3 +6,8 @@ table,
   border-collapse: collapse;
   padding: 10px;
 }
+
+.current {
+  border: 3px solid red;
+  font-weight: 700;
+}

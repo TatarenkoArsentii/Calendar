@@ -32,7 +32,6 @@ function render() {
   const body = document.body;
   const table = document.querySelector("#calendar");
   getAllDaysAndWeeks().forEach((el) => {
-   
     const tr = document.createElement("tr");
     tr.classList.add("tr");
     el.forEach((el) => {
@@ -40,6 +39,10 @@ function render() {
       td.innerHTML = el;
       tr.append(td);
       td.classList.add("td");
+
+      if (el == model.Day.currentDate.getDate()) {
+        td.classList.add("current");
+      }
     });
     table.append(tr);
   });
