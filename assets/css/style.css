@@ -1,6 +1,8 @@
+table,
 .tr,
-.td,
-table {
-  border: 1px solid balck;
-  /* text-align: center; */
+.td {
+  border: 1px solid #000;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 10px;
 }

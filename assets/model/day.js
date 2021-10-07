@@ -6,24 +6,25 @@ class Day {
     this.lastMonthDay = Day.lastMonthDay;
   }
 
-//    текущая дата
+  //    текущая дата
   static currentDate = new Date();
-//   последний день месяца
+  //   последний день месяца
   static lastMonthDay = new Date(
     Day.currentDate.getFullYear(),
-    Day.currentDate.getMonth() + 1,
+    Day.currentDate.getMonth()+1,
     0
   ).getDate();
-//   static lastMonthWeekDay = new Date(
-//     Day.currentDate.getFullYear(),
-//     Day.currentDate.getMonth() + 1,
-//     0
-//   ).getDay();
 
-//   static firstMonthWeekDay = new Date(
-//     Day.currentDate.getFullYear(),
-//     Day.currentDate.getMonth(),
-//     1
-//   ).getDay();
+  //   static lastMonthWeekDay = new Date(
+  //     Day.currentDate.getFullYear(),
+  //     Day.currentDate.getMonth() + 1,
+  //     0
+  //   ).getDay();
+
+  //   static firstMonthWeekDay = new Date(
+  //     Day.currentDate.getFullYear(),
+  //     Day.currentDate.getMonth(),
+  //     1
+  //   ).getDay();
 }
 export default Day;

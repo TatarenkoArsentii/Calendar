@@ -15,8 +15,7 @@ class Month {
     for (let i = 0; i < Month.lastMonth; i++)
       months.push(new Date(2021, i).getMonth() + 1);
 
-    console.log(months);
+    return months;
   }
 }
-console.log(new Month().getFullYearMonths());
 export default Month;
