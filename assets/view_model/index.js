@@ -10,10 +10,15 @@ function getAllDaysAndWeeks() {
   if (model.Week.firstMonthWeekDay != 0) {
     for (let i = 1; i < model.Week.firstMonthWeekDay; i++)
       arrCurrentWeek.push(null);
+  } else {
+    for (let i = 0; i < 6; i++) {
+      arrCurrentWeek.push(null);
+    }
   }
 
   for (let i = 1; i <= model.Day.lastMonthDay; i++) {
     arrCurrentWeek.push(i);
+
     if (
       new Date(
         model.Day.currentDate.getFullYear(),
@@ -22,14 +27,24 @@ function getAllDaysAndWeeks() {
       ).getDay() == 0
     ) {
       arrAllWeeks.push(arrCurrentWeek);
+
       arrCurrentWeek = [];
     }
   }
+
+  if (model.Week.lastMonthWeekDay != 0) {
+    for (let i = model.Week.lastMonthWeekDay; i < 7; i++) {
+      arrCurrentWeek.push(null);
+      console.log(i);
+      console.log(arrCurrentWeek);
+    }
+    arrAllWeeks.push(arrCurrentWeek);
+  }
+
   return arrAllWeeks;
 }
 
 function render() {
-  const body = document.body;
   const table = document.querySelector("#calendar");
   getAllDaysAndWeeks().forEach((el) => {
     const tr = document.createElement("tr");

@@ -11,7 +11,7 @@ class Day {
   //   последний день месяца
   static lastMonthDay = new Date(
     Day.currentDate.getFullYear(),
-    Day.currentDate.getMonth()+1,
+    Day.currentDate.getMonth() + 1,
     0
   ).getDate();
 
