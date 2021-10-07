@@ -46,6 +46,13 @@ function getAllDaysAndWeeks() {
 
 function render() {
   const table = document.querySelector("#calendar");
+  const p = document.createElement("p");
+  new model.Month().monthsName.forEach((el, index) => {
+    if (index == model.Month.currentMonth) {
+      p.innerHTML = el;
+    }
+  });
+  document.body.prepend(p);
   getAllDaysAndWeeks().forEach((el) => {
     const tr = document.createElement("tr");
     tr.classList.add("tr");
@@ -59,6 +66,7 @@ function render() {
         td.classList.add("current");
       }
     });
+
     table.append(tr);
   });
 }

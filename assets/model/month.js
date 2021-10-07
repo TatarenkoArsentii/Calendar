@@ -5,8 +5,22 @@ import Week from "./week.js";
 class Month {
   constructor() {
     this.currentMonth = Month.currentMonth;
+    this.monthsName = [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ];
   }
-  static currentMonth = new Date().getMonth();
+  static currentMonth = Day.currentDate.getMonth();
   static lastMonth = new Date(Day.currentDate.getFullYear(), 11).getMonth() + 1;
   static firstMonth = new Date(Day.currentDate.getFullYear(), 0).getMonth() + 1;
 
