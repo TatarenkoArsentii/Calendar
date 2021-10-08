@@ -35,8 +35,6 @@ function getAllDaysAndWeeks() {
   if (model.Week.lastMonthWeekDay != 0) {
     for (let i = model.Week.lastMonthWeekDay; i < 7; i++) {
       arrCurrentWeek.push(null);
-      console.log(i);
-      console.log(arrCurrentWeek);
     }
     arrAllWeeks.push(arrCurrentWeek);
   }
